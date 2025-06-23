@@ -53,6 +53,17 @@ genesisBlockNumber = "{{.zkevm_rollup_manager_block_number}}"
         bridge_api_url = "https://turing-bridge-api.fra.avail.so"
         bridge_timeout = 1200
 
+        [SequenceSender.AvailDAConfig.FallbackS3ServiceConfig]
+                enable=true
+                access-key=
+                bucket=
+                object-prefix=
+                region=
+                secret-key=
+                discard-after-timeout=
+
+
+
 [Log]
 Environment = "development" # "production" or "development"
 Level = "{{.global_log_level}}"
@@ -81,6 +92,15 @@ Outputs = ["stderr"]
                 bridge_enabled = false
                 bridge_api_url = "https://turing-bridge-api.fra.avail.so"
                 bridge_timeout = 1200
+
+                [Aggregator.Synchronizer.Etherman.AvailDAConfig.FallbackS3ServiceConfig]
+                        enable=true
+                        access-key=
+                        bucket=
+                        object-prefix=
+                        region=
+                        secret-key=
+                        discard-after-timeout=
        
 [AggSender]
 CertificateSendInterval = "1m"
