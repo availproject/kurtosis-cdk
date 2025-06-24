@@ -45,22 +45,24 @@ genesisBlockNumber = "{{.zkevm_rollup_manager_block_number}}"
 
 
 [SequenceSender.AvailDAConfig]
-        seed = ""
-        app_id = 0
-        ws_api_url = "wss://turing-rpc.avail.so/ws"
-        http_api_url = "https://turing-rpc.avail.so/rpc"
-        bridge_enabled = false
-        bridge_api_url = "https://turing-bridge-api.fra.avail.so"
-        bridge_timeout = 1200
+        Seed = ""
+        AppID = 0
+        WsApiUrl = "wss://turing-rpc.avail.so/ws"
+        HttpApiUrl = "https://turing-rpc.avail.so/rpc"
+        BridgeEnabled = false
+        BridgeApiUrl = "https://turing-bridge-api.fra.avail.so"
+        BridgeTimeout = 1200
 
         [SequenceSender.AvailDAConfig.FallbackS3ServiceConfig]
-                enable=true
-                access-key=
-                bucket=
-                object-prefix=
-                region=
-                secret-key=
-                discard-after-timeout=
+                Enable=true
+                AccessKey=""
+                Bucket=""
+                ObjectPrefix=""
+                Region=""
+                SecretKey=""
+                DiscardAfterTimeout=false
+
+
 
 
 
@@ -85,22 +87,22 @@ Outputs = ["stderr"]
                 MaxConns = 200
 
         [Aggregator.Synchronizer.Etherman.AvailDAConfig]
-                seed = ""
-                app_id = 0
-                ws_api_url = "wss://turing-rpc.avail.so/ws"
-                http_api_url = "https://turing-rpc.avail.so/rpc"
-                bridge_enabled = false
-                bridge_api_url = "https://turing-bridge-api.fra.avail.so"
-                bridge_timeout = 1200
+                Seed = ""
+                AppID = 0
+                WsApiUrl = "wss://turing-rpc.avail.so/ws"
+                HttpApiUrl = "https://turing-rpc.avail.so/rpc"
+                BridgeEnabled = false
+                BridgeApiUrl = "https://turing-bridge-api.fra.avail.so"
+                BridgeTimeout = 1200
 
                 [Aggregator.Synchronizer.Etherman.AvailDAConfig.FallbackS3ServiceConfig]
-                        enable=true
-                        access-key=
-                        bucket=
-                        object-prefix=
-                        region=
-                        secret-key=
-                        discard-after-timeout=
+                        Enable=true
+                        AccessKey=""
+                        Bucket=""
+                        ObjectPrefix=""
+                        Region=""
+                        SecretKey=""
+                        DiscardAfterTimeout=false
        
 [AggSender]
 CertificateSendInterval = "1m"
